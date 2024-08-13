@@ -1,0 +1,13 @@
+.Product{
+    border: 1px solid black;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+  
+   width: 150px;
+}
+.ProductTab{
+    display: flex;
+   gap: 2rem;
+   
+
+}
