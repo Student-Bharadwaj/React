@@ -3,6 +3,7 @@ import Likebutton from "./LikeButton";
 import Counter from "./Counter";
 import LuduBoard from "./LudoBoard";
 import TodoList from "./TodoList";
+import Lottery from "./Lottery";
 function App() {
   return (
     <>
@@ -10,7 +11,8 @@ function App() {
       <Counter   />
       <Likebutton/> */}
       {/* <LuduBoard/> */}
-      <TodoList/>
+      {/* <TodoList/> */}
+      <Lottery/>
 
     </>
   );

@@ -2,7 +2,9 @@ import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 export default function TodoList() {
-  let [todos, setTodos] = useState([{ task:"sample" , id: uuidv4() }]);
+  let [todos, setTodos] = useState([
+    { task: "sample", id: uuidv4(), isDone: false },
+  ]);
   let [newTodo, setNewTodo] = useState("");
 
   let updateTodoValue = (event) => {
@@ -21,6 +23,17 @@ export default function TodoList() {
     // console.log("deleted");
     setTodos((prevVal) => todos.filter((prevVal) => prevVal.id !== id));
   };
+
+  // let markDone = (id) => {
+  //   setTodos((prevTodo) =>
+  //     prevTodo.map((todo) => {
+  //       if (todo.id == id) {
+  //         return { ...todo, task: todo.task.toUpperCase() };
+  //       }
+  //     })
+  //   );
+  // };
+
   return (
     <div>
       <input
@@ -41,6 +54,7 @@ export default function TodoList() {
           <li key={todo.id}>
             <span> {todo.task}</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button onClick={() => deleteTodo(todo.id)}>Delete</button>
+            {/* <button onClick={() => markDone(todo.id)}>Mark as done</button> */}
           </li>
         ))}
       </ul>
