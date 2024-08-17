@@ -4,6 +4,9 @@ import Counter from "./Counter";
 import LuduBoard from "./LudoBoard";
 import TodoList from "./TodoList";
 import Lottery from "./Lottery";
+import Form from "./Form";
+
+import Comments from "./Comments";
 function App() {
   return (
     <>
@@ -12,7 +15,10 @@ function App() {
       <Likebutton/> */}
       {/* <LuduBoard/> */}
       {/* <TodoList/> */}
-      <Lottery/>
+      {/* <Lottery/> */}
+      {/* <Form/> */}
+   
+      <Comments />
 
     </>
   );
